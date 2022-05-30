@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>practice css</title>
+    </head>
+   <style>
+       .input_cls{
+
+      
+    width: 85%;
+    height: 25px;
+    /* padding: 5px 5px 5px 12px; */
+    /* float: left; */
+    margin-left: 25px;
+    margin-top: 10px;
+}
+   </style>
+    <body background="C:\Users\padam\Pictures\tree iamge.jpg" >
+       <form style="  background-color:rgba(0,0,0,0.6);  height: 1400px; width: 800px;margin-left: 25%;"><br>
+        &nbsp;
+        <img src="C:\Users\padam\Pictures\treelogo.jpg" style="height: 55px; width:55px "/>
+        <h1 style="color:#ffffff; text-align:center" >Tree Survey Form</h1>
+        <center>
+            <p style="color:white" height="10px" width="10px">A survey form on the health of the enviornment</p>
+        </center>
+       
+        &nbsp;   &nbsp;   &nbsp;
+        <lable style="color:white; font-size: 25px; text-align: left;"> Name: </lable><br>
+        <input type="text" placeholder="enter your name" name="usernsme" class="input_cls" required><br><br>
+        &nbsp;   &nbsp;   &nbsp;
+        <label style="color:white;font-size: 25px;"> E mail: </label><br>
+        <input type="text" placeholder="enter your e-mail" name="e-mail" class="input_cls" required><br><br>
+        &nbsp;   &nbsp;   &nbsp;
+        <label style="color:white;font-size: 25px;"> age(optional):</label><br>
+        <input type="number" placeholder="enter your age" name="age" class="input_cls"><br><br>
+        <p style="color: white;;font-size:20px; text-align:center;">select continent of residence</p>
+            <select id="selectbox" name="data" autofocus  class="input_cls"> 
+               
+                <option value="north america">North america</option>
+                <option value="america">America</option>
+                <option value="india">India</option>
+                <option value="excellent">excellent</option>
+                <option value="avrage">avrage</option>
+            </select><br><br>
+            <h1 style="color:#ffffff;text-align: center;">Choose your prefered gender</h1>
+            <label style="color:white; font-size: 25px;"><input type="radio" name="gender" id="male"/>male</label><br><br><br>
+            <lable style="color:#ffffff; font-size: 25px;"><input type="radio" name="gender" id="female"/>female</lable><br><br><br>
+            <lable style="color:#ffffff; font-size: 25px;"><input type="radio" name="gender" id="other"/>other</lable><br>
+            <h1 style="color:#ffffff;text-align: center;">Please select atleast one of the options below:</h1>
+            <label style="color:white; font-size: 20px;"><input type="checkbox" name="gender" id="1"/>I have planted a tree or any other plant</label><br><br><br>
+            <lable style="color:#ffffff;font-size: 20px;"><input type="checkbox" name="gender" id="2"/>I take part in community service for the enviornment</lable><br><br><br>
+            <lable style="color:#ffffff;font-size: 20px;"><input type="checkbox" name="gender" id="3"/>I promice to plant more from now on</lable><br>
+            <h2 style="color:#ffffff; font-size: 30px; text-align: center;">Any comments or suggestions</h2>
+            &nbump; &nbsp;
+        
+            <textarea cols="100" rows="10" maxlength="10" placeholder="comments/suggessions"></textarea>
+
+            <br>
+            <br>
+        
+        
+    </form>
+
+    
+</body>
+</html>
