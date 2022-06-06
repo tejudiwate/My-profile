@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html> 
+<body>
+    <script>
+       var contacts =[
+        {
+            firstname:'Teju1',
+            lastname:'divate1',
+            mobilenumber:2364872346,
+            likes:['like1','like2','like3','like4','Likes5']
+        },
+        {
+            firstname:'Teju2',
+            lastname:'divate2',
+            mobilenumber:2364872346,
+            likes:['like11','like21','like31','like41']
+        }
+        , {
+            firstname:'Teju3',
+            lastname:'divate3',
+            mobilenumber:364872346,
+            likes:['like12','like22','like32','like42']
+        }, {
+            firstname:'Teju4',
+            lastname:'divate4',
+            mobilenumber:3364872346,
+            likes:['like33','like23','like33','like43']
+        }
+    ]  
+    function CheckVal(inputfirstname,Property) {     
+        console.log('First name val:- '+ inputfirstname);
+        console.log('Property value:-' + Property);
+       
+            for (let i = 0; i < contacts.length; i++) {
+                    
+                if(contacts[i].firstname==inputfirstname)
+                {
+                    console.log('First Name matching with array: -'+ i)
+                    //check property exist
+                    if(Property!="")
+                    {
+                        if(Property==contacts[i].lastname){
+                            console.log('Last Name Property Matching');
+                        }else if(Property==contacts[i].mobilenumber)
+                        {
+                            console.log('Mobile Number Property Match');
+                        }
+                        else{
+                            for(var j=0;j<contacts[i].likes.length;j++)
+                                {
+                                if(contacts[i].likes[j]==Property)
+                                {
+                                    console.log('Likes Property Match');
+                                    break;
+                                }
+                                else{
+                                    console.log('No Such Property match');
+                                }
+                            }
+                        }
+                    }
+                    else{
+                        console.log('please provide property');
+                    }
+                }
+        //alert('name found')
+                else{
+                    console.log('No such contact:-'+i);
+                }
+        
+            }
+    }
+        console.log(CheckVal("Teju4",'like22'));
+  </script>
+  </body>
+  </html>
+
+
+
