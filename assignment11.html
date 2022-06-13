@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>form</title>
+  </head>
+<style>
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 45%;
+  padding: 10px;
+  height: 821px; 
+  background-color: aliceblue;
+  /* Should be removed. Only for demonstration */
+}
+
+  .input {
+  border: 0;
+  outline: 0;
+  background:white;
+  border-bottom: 1px solid black;
+  width: 80%;
+  height: 35px;
+}
+.font{
+  font-size: 19px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button{
+  width: 80%;
+  height: 35px;
+  background: linear-gradient(rgb(36, 181, 238),rgb(221, 9, 175));
+  border-radius: 15px;
+  color: white;
+}
+
+  </style>
+  <body style="background-color:aqua">
+    <form>
+    <div class="row">
+      <div class="column">
+        <img src="C:\Users\padam\Pictures\shoo.jpg" style="width:100%;"/>
+      </div>
+      <div class="column" style="padding: 35px;">
+      <h1 style="color:#932d32;">CheackOut</h1><br>
+<h3 style="color: #932d32;">Payment Information</h3><br>
+    <label for="cname" class="font">Cardholder Name:</label><br><br>
+   <input type="textbox" id="cname" name="cardholdername" class="input"/><br><br>
+    <label for="cardnumber"class="font">Card number:</label><br><br>
+    <input type="number" id="cnumber" name="chnumber" placeholder="1"class="input"><br><br>
+    <label for="country" class="font">Card type:</label><br><br>
+   <select class="input">
+ 
+    <option value="australia">----Select-----</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select><br><br>
+    <lable for="Expiry" class="font">Expiry</lable>
+    <input type="date" name="begin" style="width:40%"
+    placeholder="dd-mm-yyyy  cvv"  value="cvv"/><br><br>
+
+
+  <botton>
+    <input type="submit" value="CheackOut" class="button">
+    </botton>
+</div>
+
+    </div>
+    </form>
+  </body>
