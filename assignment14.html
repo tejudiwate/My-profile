@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            javascript
+        </title>
+        <style>
+            .div{
+                background-color: white;
+                               width: 550px;
+                margin-left: 500px;
+                margin-top: 120px;
+                
+            }
+            .btn{
+                color:white;
+                background-color: black;
+                width: 80%;
+                height: 35px;
+                text-align: center;
+                margin-left: 15px;
+                margin-bottom: 6%;
+        } 
+        .row:after {
+                     content: "";
+                        display: table;
+                       clear: both;
+                    } 
+                    
+                        .column {
+                   float:left;
+                 width: 45%;
+             padding: 10px;
+                 height: 190px; 
+             
+  
+                 }
+                 .column1 {
+                   float:right;          
+                       width: 45%;
+                padding-top: 55px;
+                 height: 160px; 
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+             
+  
+                 }
+                 .img{
+                    height: 163px;
+                     width: 125px;
+                     float: left;
+                 }
+                 
+                                                                                                                                                                  
+        </style>
+        </head>
+        <body style="background-color:aqua">
+            <div class="div">
+               <div class="row">
+                <h3 style="text-align: center;">4 Birthdays Today</h3>
+            
+
+
+               <div class="column"><img id="image1" style="align-self:left"></div>
+               <div class="column1" id="div1"></div><br><br>
+               <div class="column"><img id="image2" class="img"/></div>
+               <div class="column1" id="div2"></div>
+                <div class="column"><img id="image3"/></div>
+               <div class="column1" id="div3"></div>
+               <div class="column"><img id="image4"/></div>
+               <div class="column1" id="div4"></div>
+            
+               <button id="btnclick" onclick="clickevnt()" class="btn">Clear All</button><br>
+                </div>
+                
+                </div>
+               
+
+
+                <script>
+
+               const person = [{firstName:"Pragati",age:24},
+                    {firstName:"Priya", age:25},
+                    {firstName:"Rohan", age:26},
+                    {firstName:"Joey", age:27},
+                ];
+
+                
+                  //alert('hii');
+                  //console.log(person);
+                  console.log(person[0].firstName);
+                  console.log(person[1].firstName);
+                  console.log(person[2].firstName);
+                  console.log(person[3].firstName);
+                
+
+                     var img= document.getElementById('image1');
+                     img.src="../img/assign14/cartoon1.jpg";
+                            
+                     document.getElementById("div1").innerHTML +="<p>"+person[0].firstName+" </p><br/><p>"+person[0].age +" years</p>";
+                   //  var arr2 = ['Rohan'+ "<br>"+25 +'years'];
+                    var img= document.getElementById('image2');
+                    img.src="../img/assign14/cartoon9.jpg";
+                    document.getElementById("div2").innerHTML +="<p>"+person[1].firstName+" </p><br/><p>"+person[1].age + " years</p>";
+
+                    var img= document.getElementById('image3');
+                    img.src="../img/assign14/cartoon2.jpg";
+                    document.getElementById("div3").innerHTML +="<p>"+person[2].firstName+" </p><br/><p>"+person[2].age + " years</p>";
+
+                   // var arr3 = ['Rohan'+ "<br>"+25 +'years'];
+                    var img= document.getElementById('image4');
+                    img.src="../img/assign14/cartoon8.jpg";
+                    document.getElementById("div4").innerHTML +="<p>"+person[3].firstName+" </p><br/><p>"+person[3].age + " years</p>";
+
+                    function clickevnt(){
+                  // alert('hiii');
+                   document.getElementById('image1').hidden=true;
+                   document.getElementById('image2').hidden=true;
+                   document.getElementById('image3').hidden=true;
+                   document.getElementById('image4').hidden=true;
+                   document.getElementById("div1").hidden=true;
+                   document.getElementById("div2").hidden=true;
+                   document.getElementById("div3").hidden=true;
+                   document.getElementById("div4").hidden=true;
+                
+                    }
+                </script>
+                
+        </body>
+</html>

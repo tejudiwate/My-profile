@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>moving image</title>
+    </head>
+    <body>
+        <div>
+
+        <img src="..\img\railway.png"style="height:200px; width: 200px;" id="image"/>
+        </div>
+        <div>
+
+        <button id="btnclick" onclick="clickevnt()">Click me..</button>
+
+        </div>
+            <script type="text/javascript">
+                var i=100;
+             var img= document.getElementById('image');
+                
+            function clickevnt()
+            {
+                //alert('hiii');
+               img.style.marginLeft =i+100 + 'px';
+               i=i+100;
+            }
+
+        
+    
+    
+</script>
+
+
+    </body>
+</html>
