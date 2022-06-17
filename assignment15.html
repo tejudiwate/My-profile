@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-right:50px;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float:right;
+  padding: 15px;
+}
+
+li a {
+  display: block;
+  color: rgb(23, 200, 67);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #800080;
+}
+.div{
+    background-color: white;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    margin-left: 45px;
+    margin-right: 45px;
+
+}
+.h1{
+      text-align: center;
+      padding-top: 35px;
+}
+.row:after {
+                     content: "";
+                        display: table;
+                       clear: both;
+                    
+                    } 
+                    
+            .column {
+                   float:left;
+                 margin: 40px;
+                 height:135px;
+                 width: 200px;
+                 border: 3px solid rgb(255,165,0);
+             
+  
+                 }
+                 .column1 {
+                    /* width: 100%; */
+                    padding-top: 1%;
+                 }
+                .col-main-left{
+                   width :50%;
+                    float: left;
+                }
+                .col-main-right{
+                    float: right;
+                    width: 50%;
+                
+                }
+                .imgcls{
+                    width: 200px;
+                    height: 135px;;
+                }
+
+
+.displynone
+{
+    display: none;
+}
+.displyblock
+{
+    display: block;
+}
+.col-main-left{
+    background-color: white;
+}
+.col-main-right{
+    background-color: white;
+}
+</style>
+
+
+</head>
+<body style="background-color:black">
+    <div class="div">
+        <h1 class="h1">Our Menu</h1>
+<ul>
+  <li><a class="active" href="#" onclick="fun_all()">All</a></li>
+  <li><a href="#" onclick="fun_Breakfast()">BreakFast</a></li>
+  <li><a href="#" onclick="fun_Lunch()">Lunch</a></li>
+  <li><a href="#" onclick="fun_shakes()">Shakes</a></li>
+</ul>
+
+<div id="Main_clsfood">
+    <!--Left side-->
+   
+
+<!--Riht side div started-->
+
+    <!-- <div class="col-main-right">
+    </div> -->
+</div>
+    
+<script>
+    const data1 = [{imgpath:"../img/assign15/food.jpeg",
+                    foodName:"food",
+                    price:"$15",
+                    category:"breakfast",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                   },
+                {imgpath:"../img/assign15/food7.jpg",
+                    foodName:"Icecream",
+                    price:"$15",
+                    category:"shakes",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                },
+                {imgpath:"../img/assign15/food6.jpg",
+                    foodName:"sandwich",
+                    price:"$15",
+                    category:"breakfast",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                },
+                {imgpath:"../img/assign15/food8.jpg",
+                    foodName:"Icecreamshake",
+                    price:"$15",
+                    category:"shakes",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                },
+                {imgpath:"../img/assign15/food1.jpg",
+                    foodName:"Lunch thali",
+                    price:"$15",
+                    category:"lunch",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                },
+                {imgpath:"../img/assign15/food2.webp",
+                    foodName:"chat",
+                    price:"$15",
+                    category:"breakfast",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                },
+                {imgpath:"../img/assign15/food3.jpg",
+                    foodName:"momoes",
+                    price:"$15",
+                    category:"lunch",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                },
+                {imgpath:"../img/assign15/food4.jpg",
+                    foodName:"buttermilkpancake",
+                    price:"$15",
+                    category:"lunch",
+                    des:"Lorem ipsum dolor sit amet consectetur adipisicing Voluptates deleniti at accusantium quos et quod nesciunt,facere nihil reprehenderit eligendi",
+                }
+                ];
+
+                 var htmlvar="";
+
+                 for(var i=0; i<data1.length;i++)
+                 {
+                    if(i/2==0){
+                        htmlvar+="<div class='col-main-left'>";
+                    }
+                    else{
+                        htmlvar+="<div class='col-main-right'>";
+                    }
+   
+                 
+                   htmlvar+="<div class='row'>";
+                    //alert(data1[i].imgpath);
+                  htmlvar+="<div class='column'>";
+                  htmlvar+="<img src='"+data1[i].imgpath +"' class='imgcls'/>";
+                  htmlvar+="</div>";
+
+                 htmlvar+="<div class='column1'>";
+                 htmlvar+="<h2>"+data1[i].foodName+"<span style='float: right;font-size:medium;margin-right: 10px;'>"+data1[i].price+"</span></h2><hr/>";
+                 htmlvar+="<p>"+data1[i].des+"</p>";
+                  htmlvar+="</div>";
+                 htmlvar+="</div>  </div>";
+                 }
+
+                 //console.log(htmlvar);
+
+                 //document.getElementsByClassName('Main_clsfood');
+                 document.getElementById('Main_clsfood').innerHTML=htmlvar;
+
+
+   
+    //Write a function for the shakes that will show only the shakes related post
+    function fun_shakes(){
+        //alert('In Shakes Tab');
+        document.getElementById('Main_clsfood').innerHTML="";
+
+               htmlvar="";
+
+                for(var i=0; i<data1.length;i++)
+                {
+                    if(data1[i].category=='shakes'){
+                       // alert(data1[i].category);
+                    if(i/2==0){
+                        htmlvar+="<div class='col-main-left'>";
+                    }
+                    else{
+                        htmlvar+="<div class='col-main-right'>";
+                    }
+
+
+                    htmlvar+="<div class='row'>";
+                    //alert(data1[i].imgpath);
+                    htmlvar+="<div class='column'>";
+                    htmlvar+="<img src='"+data1[i].imgpath +"' class='imgcls'/>";
+                    htmlvar+="</div>";
+
+                    htmlvar+="<div class='column1'>";
+                    htmlvar+="<h2>"+data1[i].foodName+"<span style='float: right;font-size:medium;margin-right: 10px;'>"+data1[i].price+"</span></h2><hr/>";
+                    htmlvar+="<p>"+data1[i].des+"</p>";
+                    htmlvar+="</div>";
+                    htmlvar+="</div>  </div>";
+                }
+            }
+
+        console.log(htmlvar);
+        document.getElementById('Main_clsfood').innerHTML=htmlvar;
+
+    }
+
+             
+    function fun_Lunch(){
+        //alert('In Shakes Tab');
+        document.getElementById('Main_clsfood').innerHTML="";
+
+               htmlvar="";
+
+                for(var i=0; i<data1.length;i++)
+                {
+                    if(data1[i].category=='lunch'){
+                       // alert(data1[i].category);
+                    if(i/2!=0){
+                        htmlvar+="<div class='col-main-left'>";
+                    }
+                    else{
+                        htmlvar+="<div class='col-main-right'>";
+                    }
+
+
+                    htmlvar+="<div class='row'>";
+                    //alert(data1[i].imgpath);
+                    htmlvar+="<div class='column'>";
+                    htmlvar+="<img src='"+data1[i].imgpath +"' class='imgcls'/>";
+                    htmlvar+="</div>";
+
+                    htmlvar+="<div class='column1'>";
+                    htmlvar+="<h2>"+data1[i].foodName+"<span style='float: right;font-size:medium;margin-right: 10px;'>"+data1[i].price+"</span></h2><hr/>";
+                    htmlvar+="<p>"+data1[i].des+"</p>";
+                    htmlvar+="</div>";
+                    htmlvar+="</div>  </div>";
+                }
+            }
+
+        console.log(htmlvar);
+        document.getElementById('Main_clsfood').innerHTML=htmlvar;
+
+    }
+
+
+
+    function fun_all(){
+        //alert('In Shakes Tab');
+        document.getElementById('Main_clsfood').innerHTML="";
+
+               htmlvar="";
+
+                for(var i=0; i<data1.length;i++)
+                {
+                    
+                       // alert(data1[i].category);
+                    if(i/2!=0){
+                        htmlvar+="<div class='col-main-left'>";
+                    }
+                    else{
+                        htmlvar+="<div class='col-main-right'>";
+                    }
+
+
+                    htmlvar+="<div class='row'>";
+                    //alert(data1[i].imgpath);
+                    htmlvar+="<div class='column'>";
+                    htmlvar+="<img src='"+data1[i].imgpath +"' class='imgcls'/>";
+                    htmlvar+="</div>";
+
+                    htmlvar+="<div class='column1'>";
+                    htmlvar+="<h2>"+data1[i].foodName+"<span style='float: right;font-size:medium;margin-right: 10px;'>"+data1[i].price+"</span></h2><hr/>";
+                    htmlvar+="<p>"+data1[i].des+"</p>";
+                    htmlvar+="</div>";
+                    htmlvar+="</div>  </div>";
+               
+            }
+        
+
+
+            //console.log(htmlvar);
+            document.getElementById('Main_clsfood').innerHTML=htmlvar;
+    }
+
+            function fun_Breakfast(){
+        //alert('In Shakes Tab');
+        document.getElementById('Main_clsfood').innerHTML="";
+
+               htmlvar="";
+
+                for(var i=0; i<data1.length;i++)
+                {
+                    if(data1[i].category=='breakfast'){
+                       // alert(data1[i].category);
+                    if(i/2!=0){
+                        htmlvar+="<div class='col-main-left'>";
+                    }
+                    else{
+                        htmlvar+="<div class='col-main-right'>";
+                    }
+
+
+                    htmlvar+="<div class='row'>";
+                    //alert(data1[i].imgpath);
+                    htmlvar+="<div class='column'>";
+                    htmlvar+="<img src='"+data1[i].imgpath +"' class='imgcls'/>";
+                    htmlvar+="</div>";
+
+                    htmlvar+="<div class='column1'>";
+                    htmlvar+="<h2>"+data1[i].foodName+"<span style='float: right;font-size:medium;margin-right: 10px;'>"+data1[i].price+"</span></h2><hr/>";
+                    htmlvar+="<p>"+data1[i].des+"</p>";
+                    htmlvar+="</div>";
+                    htmlvar+="</div>  </div>";
+                }
+            }
+
+        console.log(htmlvar);
+        document.getElementById('Main_clsfood').innerHTML=htmlvar;
+
+    
+
+    }
+
+      
+</script>
+</body>
+</html>
+
+
