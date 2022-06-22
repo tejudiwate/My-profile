@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Quotes</title>
+    </head>
+    <style>
+        .body{
+            background-color: aqua;
+        }
+       
+        #container{
+            
+            /* border: 1px solid; */
+            height: 275px;
+            width: 750px;
+            margin: 0 auto;
+            text-align: center;
+
+        }
+        #btn{
+            margin: 50px;
+            height: 50px;
+            width: 250px;
+            font-size: 20px;
+            background-color: beige;
+            color: black;
+
+        }
+        #output{
+            margin: 25px auto;
+            font-size: 26px;
+            color: aliceblue;
+            font-variant: small-caps;
+        }
+
+    </style>
+       <body class="body">
+        <div id="container">
+            <button id="btn">Press for the new Quote!</button>
+             <div id="output">“Half my life is an act of revision.”<br> – John Irving</div> 
+        </div>
+
+    </body>
+    <script>
+        let btn = document.getElementById('btn');
+        let output = document.getElementById('output');
+        var x=0;
+     var quotes=[
+
+                {quote:"“A writer is someone for whom writing is more difficult than it is for other people.”",
+                source:"― Thomas Mann, Essays of Three Decades"
+                },
+                {quote:"“A good novel tells us the truth about its hero; but a bad novel tells us the truth about its author.”" ,
+                source:"― G.K. Chesterton, Heretics"
+                },
+                {quote:"“Quiet people have the loudest minds.”" ,
+                source:"― Stephen King"
+                },
+                {quote:"“When male authors write love stories, the heroine tends to end up dead.”" ,
+                source:"― Susan Elizabeth Phillips, Ain't She Sweet?"
+                },
+                {quote:" So leave them alone and go about your own life." ,
+                source:"― John Scalzi"
+                },
+                {quote:"“The most intriguing people you will encounter in this life are the people who had insights about you, that you didn't know about yourself.”" ,
+                source:"― Shannon L. Alder"
+                },
+                {quote:"“What I like in a good author is not what he says, but what he whispers.”" ,
+                source:"― Logan Pearsall Smith"
+                },
+                {quote:"“If you dont have time to read, you dont have the time (or the tools) to write. Simple as that.”" ,
+                source:"-Stephen King"
+                },
+                {quote:"“One day I will find the right words, and they will be simple.” " ,
+                source:"-Jack Kerouac, The Dharma"
+                },
+                {quote:"“You never have to change anything you got up in the middle of the night to write.”" ,
+                source:"Bellow"
+                },
+                {quote:"“You must stay drunk on writing so reality cannot destroy you.”" ,
+                source:"-Ray Bradbury, Zen "
+                },
+                {quote:"“I kept always two books in my pocket, one to read, one to write in.”",
+                source:"-Robert Louis"
+                },
+                {quote:"“A word after a word after a word is power.”" ,
+                source:"-Margaret Atwood"
+                },
+                {quote:"“Tears are words that need to be written.” " ,
+                source:"-Paulo Coelho"
+                },
+                {quote:"“To survive, you must tell stories.”" ,
+                source:"-Umberto Eco,"
+                },
+                {quote:"“The purpose of a writer is to keep civilization from destroying itself.”" ,
+                source:"-Albert Camus"
+                }
+                        
+      ];
+
+
+      btn.addEventListener('click',function(){
+        changetheQuotes();
+      });
+
+        function changetheQuotes(){
+        x=x+1;
+
+       output.innerHTML = quotes[x].quote +' '+ quotes[x].source;
+            var color=Math.random() * 200;
+            var color1=Math.random() * 200;
+            var color2=Math.random() * 200;
+          document.body.style.backgroundColor = 'rgb('+color+','+color1+','+color2+')';
+        
+            if(x== quotes.length-1)
+            {
+                x=0;
+            }
+        }
+
+            
+       setInterval(function(){changetheQuotes()},5000);
+
+
+              function  RandomColor(){
+                    red = Math.random();
+                    green = Math.random();
+                    blue = Math.random();
+                   
+                    return red +','+green +','+blue;
+                    };
+
+                function getRandomQuote(){
+
+                number = Math.floor(Math.random() * (quotes.length))
+                return number;
+                }
+                //window.setInterval(getRandomQuote(),500);
+               
+
+    </script>
+</html>
